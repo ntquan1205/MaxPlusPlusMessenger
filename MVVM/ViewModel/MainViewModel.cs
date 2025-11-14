@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChatClient.MVVM.ViewModel
 {
-    class MainViewModel
+    public class MainViewModel
     {
         public RelayCommand ConnectToServerCommand { get; set; }
 
