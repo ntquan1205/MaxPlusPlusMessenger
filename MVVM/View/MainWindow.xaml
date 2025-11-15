@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MaxPlusPlusMessenger" 
         xmlns:viewmodel="clr-namespace:ChatClient.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="474" Width="816">
 
     <Window.DataContext>
         <viewmodel:MainViewModel/>
@@ -37,8 +37,8 @@
             <ListView Height="380"/>
 
             <StackPanel Orientation="Horizontal">
-                <TextBox Height="55" Width="530" VerticalContentAlignment="Center"/>
-                <Button Width="70" Content="Send"/>
+                <TextBox Height="55" Width="530" VerticalContentAlignment="Center" Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button Width="70" Content="Send" Command="{Binding SendMessageCommand}"/>
             </StackPanel> 
         </StackPanel>
 
